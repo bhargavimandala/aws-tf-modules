@@ -6,3 +6,13 @@ resource "aws_instance" "web" {
     Name = "${var.env}-${var.product}"
   }
 }
+
+module "iam" {
+    source = "../iam-module"
+  }
+
+module "s3" {
+    source = "../s3-module"
+    
+    
+}  
