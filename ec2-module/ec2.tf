@@ -2,7 +2,7 @@ resource "aws_instance" "web" {
   ami           = var.ami
   instance_type = var.instance_type
   iam_instance_profile = module.iam.ec2-profile
-  vpc_security_group_ids = [module.sg.sg_arn]
+  vpc_security_group_ids = [module.sg.sg_arn.id]
 
   tags = {
     Name = "${var.env}-${var.product}"
