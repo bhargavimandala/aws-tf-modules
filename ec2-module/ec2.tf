@@ -12,6 +12,7 @@ module "iam" {
     source = "../iam-module"
     env = var.env
     product = var.product
+    policy_name = var.policy_name
 }
 
 module "s3" {
