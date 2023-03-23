@@ -4,6 +4,3 @@ variable "env" {
 variable "product" {
     type = string
 }  
-variable "name" {
-    type = string
-}

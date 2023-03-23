@@ -17,5 +17,5 @@ module "s3" {
     source = "../s3-module"
     env = var.env
     product = var.product
-    name = var.name
+    
 }  
