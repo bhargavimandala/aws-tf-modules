@@ -9,10 +9,12 @@ resource "aws_instance" "web" {
 
 module "iam" {
     source = "../iam-module"
-  }
+    env = var.env
+    product = var.product
+}
 
 module "s3" {
     source = "../s3-module"
-    
-    
+    env = var.env
+    product = var.product
 }  
