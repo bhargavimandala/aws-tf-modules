@@ -1,5 +1,5 @@
 resource "aws_iam_role" "iam_role" {
-  name = var.env-var.product-iam-role
+  name = "${var.env}-${var.product}-iam-role"
 
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
