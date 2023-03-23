@@ -3,6 +3,6 @@ resource "aws_instance" "web" {
   instance_type = var.instance_type
 
   tags = {
-    Name = var.env-var.product
+    Name = "${var.env}-${var.product}"
   }
 }
